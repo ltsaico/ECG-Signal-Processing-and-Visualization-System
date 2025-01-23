@@ -24,7 +24,7 @@ Technology Stack:
 
 Usage Instructions:
 
-1. Connect the ESP32 to the Front-End analog circuit to receiver and sample the data.
+1. Connect the ESP32 to the Front-End analog circuit to receive and sample the data.
 2. Run the Python software to receive, filter, and visualize the ECG data on the GUI.
 3. Configure the Adafruit IO account and credentials in the Python script to enable wireless communication.
 4. Access the ECG data remotely via the Adafruit IO dashboard.

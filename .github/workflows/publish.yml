@@ -25,4 +25,5 @@ jobs:
       env:
         TWINE_USERNAME: ${{ ltsai-1234 }} 
         TWINE_PASSWORD: ${{ pypi-AgEIcHlwaS5vcmcCJDNiNTg4ODg5LTA1ZjgtNDU3NC04NTIzLTRmYjI4YzRmNDc4ZQACKlszLCIzMDVjNDcxZS0
-2OTVkLTQ5OWQtYWVlMy1jYzQ2NmM5Y2ZhNWUiXQAABiCncodsC4Mv2BrBwidqnVCGs2rTbE0tyGqIWeWlziYzEg }}      run: twine upload dist/*
+2OTVkLTQ5OWQtYWVlMy1jYzQ2NmM5Y2ZhNWUiXQAABiCncodsC4Mv2BrBwidqnVCGs2rTbE0tyGqIWeWlziYzEg }}      
+      run: twine upload dist/*

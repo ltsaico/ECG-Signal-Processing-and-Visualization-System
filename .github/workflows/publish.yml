@@ -1,0 +1,28 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: pip install setuptools wheel twine
+
+    - name: Build package
+      run: python setup.py sdist bdist_wheel
+
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: ${{ __token__ }} 
+        TWINE_PASSWORD: ${{ pypi-AgEIcHlwaS5vcmcCJDNiNTg4ODg5LTA1ZjgtNDU3NC04NTIzLTRmYjI4YzRmNDc4ZQACKlszLCIzMDVjNDcxZS0
+2OTVkLTQ5OWQtYWVlMy1jYzQ2NmM5Y2ZhNWUiXQAABiCncodsC4Mv2BrBwidqnVCGs2rTbE0tyGqIWeWlziYzEg }}      run: twine upload dist/*
